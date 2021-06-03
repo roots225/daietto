@@ -1,9 +1,6 @@
 .card {
   width: 100%;
   background-color: transparent;
-  & + .card {
-    margin-top: 100px;
-  }
   .card-img-top {
     position: absolute;
     top: 0;
@@ -13,7 +10,7 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    min-height: 440px;
+    min-height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: $white;

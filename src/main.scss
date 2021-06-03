@@ -10,6 +10,9 @@ $red: #EE6A6E;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "custom-card";
 
+body {
+  overflow-x: hidden;
+}
 a {
   text-decoration: none;
   color: $text-default;
@@ -20,6 +23,7 @@ a {
 p {
   margin: 0;
 }
+
 section {
   padding: 50px 0;
 }
@@ -40,9 +44,57 @@ section {
     }
   }
 }
-
+.navbar-group {
+  display: flex;
+  width: 100%;
+  .navbar-nav {
+    li {
+      .nav-link {
+        color: $text-default;
+        &:hover {
+          color: $primary;
+        }
+      }
+      &.active {
+        .nav-link {
+          color: $primary;
+        }
+      }
+    }
+    &.authentication-nav {
+      width: 30%;
+      justify-content: flex-end;
+      padding-right: 50px;
+      li {
+        .nav-link {
+          font-weight: bold;
+        }
+        &:first-child {
+          .nav-link {
+            color: $secondary;
+          }
+        }
+        &:last-child {
+          .nav-link {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  & > ul:first-child {
+    width: 70%;
+    justify-content: center;
+  }
+  
+}
 .primary-banner {
   padding-top: 80px;
+  @media screen and (min-width: 1200px) {
+    .row-custom {
+      align-items: center;
+    }
+  }
   .left-side {
     .slogan {
       position: relative;
@@ -79,9 +131,15 @@ section {
         &:first-child {
           margin-bottom: 100px;
           margin-right: 3%;
+          @media screen and (min-width: 1200px) {
+            margin-bottom: 150px;
+          }
         }
         &:nth-child(2) {
           margin-top: 100px;
+          @media screen and (min-width: 1200px) {
+            margin-top: 150px;
+          }
         }
       }
       .nutritionnal-information {
@@ -90,6 +148,11 @@ section {
         top: 28px;
         left: 33%;
         z-index: 2;
+        @media screen and (min-width: 1200px) {
+          width: 40%;
+          top: 48px;
+          left: 38%;
+        }
       }
       .results-information {
         position: absolute;
@@ -97,6 +160,11 @@ section {
         bottom: 30px;
         left: 3px;
         z-index: 2;
+        @media screen and (min-width: 1200px) {
+          left: 70%;
+          width: 40%;
+          bottom: 24%;
+        }
       }
     }
     &:after {
@@ -187,6 +255,9 @@ section {
   line-height: 2.875rem;
   font-weight: bold;
   color: $secondary;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 60px;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -194,17 +265,39 @@ section {
     height: 8px;
     border-radius: 10px;
     background-color: $secondary;
-    transform: translateY(-20px);
+    transform: translateY(-80px);
   }
 }
 
 .sales-and-marketings {
+  .sales-row-reverse-lg {
+    @media screen and (min-width: 1200px) {
+      flex-direction: row-reverse;
+      align-items: center;
+      .section-title {
+        padding: 50px 0;
+      }
+    }
+  }
+}
 
+.consumes {
+  & > .container {
+    & > .row {
+      @media screen and (min-width: 1200px) {
+        align-items: center;
+      }
+    }
+  }
 }
 .consumes-image {
   text-align: center;
   img {
     width: 100%;
+    @media screen and (min-width: 1200px) {
+      width: auto;
+      max-height: 500px;
+    }
   }
 }
 
@@ -212,6 +305,20 @@ section {
   padding: 100px 0 30px 0;
   @media screen and (min-width: 1200px) {
     display: flex;
+    padding-top: 0px;
+  }
+  .dish {
+    &:first-child {
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 150px;
+      }
+    }
+    & + .dish {
+      margin-top: 100px;
+      @media screen and (min-width: 1200px) {
+        margin-top: 150px;
+      }
+    }
   }
   .dish-title {
     color: $secondary;
@@ -253,10 +360,30 @@ section {
 
 footer {
   padding: 50px 0;
+  .footer-list {
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+      }
+    }
+    .title {
+      color: $primary;
+      font-weight: bold;
+    }
+  }
   .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 1200px) {
+      justify-content: flex-start;
+    }
     .logo {
       width: 42px;
       height: auto;
@@ -274,6 +401,9 @@ footer {
     padding: 40px 0;
     display: flex;
     justify-content: center;
+    @media screen and (min-width: 1200px) {
+      padding-top: 0;
+    }
     li {
       list-style: none;
       display: inline-block;
@@ -288,5 +418,10 @@ footer {
   }
   .copyright {
     text-align: center;
+    @media screen and (min-width: 1200px) {
+      margin-top: 30px;
+      padding-top: 50px;
+      text-align: left;
+    }
   }
 }
