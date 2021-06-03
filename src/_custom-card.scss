@@ -1,0 +1,28 @@
+.card {
+  width: 100%;
+  background-color: transparent;
+  & + .card {
+    margin-top: 100px;
+  }
+  .card-img-top {
+    position: absolute;
+    top: 0;
+    transform: translateY(-35%)
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white;
+    border-top-left-radius: 153px;
+    border-top-right-radius: 153px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 50px 30px;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+  }
+}

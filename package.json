@@ -1,0 +1,17 @@
+{
+  "name": "DAIETTO",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass src/main.scss dist/app.css --watch",
+    "build": "sass src/main.scss dist/app.css --compress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.1"
+  }
+}
